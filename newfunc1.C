@@ -6,6 +6,7 @@
   Some helpful references:
  - https://github.com/open-power/hostboot/blob/release-fw1060/src/include/usr/targeting/common/target.H#L1081
  - https://github.com/open-power/hostboot/blob/release-fw1060/src/include/usr/targeting/common/utilFilter.H#L161
- - https://github.com/open-power/hostboot/blob/release-fw1060/src/usr/targeting/common/xmltohb/attribute_types.xml#1891
+ - https://github.com/open-power/hostboot/blob/release-fw1060/src/usr/targeting/common/xmltohb/attribute_types.xml#1931 (ATTR_PROC_FABRIC_GROUP_ID)
 */
+
 
