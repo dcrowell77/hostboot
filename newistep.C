@@ -94,7 +94,6 @@ void* step_mss_freq( void )
 	// Get the list of MCBIST targets from the Hostboot targeting model
     TARGETING::TargetHandleList l_mcbistTargetList;
     getAllChiplets(l_mcbistTargetList, TYPE_MCBIST);
-    std::vector< fapi2::Target<fapi2::TARGET_TYPE_MCBIST> > l_fapi2_mcbistTargetList;
 
 	// Loop through all of the MCBIST targets
 	for (const auto & l_mcbist_target : l_mcbistTargetList)
@@ -104,7 +103,7 @@ void* step_mss_freq( void )
                     TARGETING::get_huid(l_mcbist_target));
 
 		// Convert the HB target into the FAPI target
-		fapi2::Target<fapi2::TARGET_TYPE_MCBIST> l_fapi2_mcbistTarget;
+		fapi2::Target<fapi2::TARGET_TYPE_MCBIST> l_fapi2_mcbistTarget(l_mcbist_target);
 
 		// Execute the HWP function 
 		FAPI_INVOKE_HWP(l_err, p9_mss_freq_system, l_fapi2_mcbistTarget);
@@ -142,4 +141,5 @@ void* step_mss_volt( void )
 {
 	// ... fill this in ...
 }
+
 
